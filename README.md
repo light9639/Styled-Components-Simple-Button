@@ -30,6 +30,8 @@ yarn add styled-components
 
 ## ✒️ App.tsx, Button.tsx, StyledButton.tsx, types.ts 수정 및 작성
 ### :zap: App.tsx
+- `toggleTheme`을 사용하여 버튼을 클릭할 시 테마가 변경되도록 한다.
+- 테마를 변경하게  `lightTheme`, `darkTheme`로 지정되어 있는 색으로 바뀌게 된다.
 ```typescript
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from 'styled-components';
@@ -81,6 +83,7 @@ const StyledLayout = styled.div`
 `;
 ```
 ### :zap: Button.tsx
+- 버튼 컴포넌트 생성.
 ```typescript
 // Button.tsx
 import React, { FC } from 'react';
@@ -94,6 +97,7 @@ const Button: FC<ButtonProps> = ({ children, variant = 'primary' }) => {
 export default Button;
 ```
 ### :zap: StyledButton.tsx
+- 버튼 스타일링 및 타입 생성하기.
 ```typescript
 // StyledButton.tsx
 import styled from 'styled-components';
@@ -134,6 +138,7 @@ export const StyledRoundButton = styled(StyledButton)`
 export default StyledButton;
 ```
 ### :zap: types.ts
+- `ButtonProps` 타입을 생성.
 ```typescript
 export interface ButtonProps {
     children: String
